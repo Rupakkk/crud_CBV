@@ -14,12 +14,12 @@ def get_id(id=None):
     data = r.json()
     print(data)
     
-get_id()
+# get_id(1)
 
 
 def post_create():
     data = {
-        'name': 'Ramhari',
+        'name': 'Peter Parker',
         'age' : 45,
         'address': 'Lumbini'
 
@@ -28,12 +28,12 @@ def post_create():
     r = requests.post(url= URL,data = json_data)
     data = r.json()
     print(data)
-# post_create()
+post_create()
 
 def post_update():
     data = {
-        'id': 4,
-        'name': 'harihari',
+        'id': 12,
+        'name': 'Tony Stark',
         'age' : 65,
         'address': 'butwal'
 
@@ -52,6 +52,6 @@ def del_data(id):
     r = requests.delete(url = URL, data = json_data)
     data =  r.json()
     print(data)
-# del_data(4)
+# del_data(12)
 
     
