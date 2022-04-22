@@ -19,9 +19,9 @@ def get_id(id=None):
 
 def post_create():
     data = {
-        'name': 'Peter Parker',
-        'age' : 45,
-        'address': 'Lumbini'
+        'name': 'haWk',
+        'age' : 1999,
+        'address': 'china'
 
     }
     json_data = json.dumps(data)

@@ -46,8 +46,9 @@ class StudentView(View):
             serialize.save()
             serializer = {'msg':'Data creation Successful'}
             return JsonResponse(serializer)
-        data = {'msg':'Data Creation Unsuccessful'}
-        return JsonResponse(data)
+        else:
+            data = JSONRenderer().render(serialize.errors)
+            return HttpResponse(data,content_type = 'application/json')
 
     def put(self,request,*args,**kwargs):
         # if request.method == "PUT":
